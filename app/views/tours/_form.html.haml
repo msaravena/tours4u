@@ -1,14 +1,14 @@
 = simple_form_for(@tour, html: { multipart: true, class: 'form-horizontal'}) do |f|
-	= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a category"}
-	= f.input :tour, label: "Tour Title" 
-	= f.input :place, label: "Place of Tour"
-	= f.input_field :image, label: "Upload Picture"	
-	= f.input :description, label: "Tour Description"
-	= f.input :price, label: "Price of Tour"
-	= f.input :date, label: "Date of Tour"
-	= f.input :duration, label: "Duration"
-	= f.input :reservations, label: "Make a Resevation"
-	= f.input :reviews, label: "Give us your opinion"
+	= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a category"}, input_html: { class: "dropdown-toggle" }
+	= f.input :tour, label: "Tour Title", input_html: { class: "form-control"} 
+	= f.input :place, label: "Place of Tour", input_html: { class: "form-control"} 
+	= f.input_field :image, label: "Upload Picture", input_html: { class: "form-control"} 
+	= f.input :description, label: "Tour Description", input_html: { class: "form-control"} 
+	= f.input :price, label: "Price of Tour", input_html: { class: "form-control"} 
+	= f.input :date, label: "Date of Tour", input_html: { class: "form-control"} 
+	= f.input :duration, label: "Duration", input_html: { class: "form-control"} 
+	= f.input :reservations, label: "Make a Resevation", input_html: { class: "form-control"} 
+	= f.input :reviews, label: "Give us your opinion", input_html: { class: "form-control"} 
 	%br/
 	= f.button :submit
 
