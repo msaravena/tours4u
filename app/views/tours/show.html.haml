@@ -1,14 +1,17 @@
-%h2= @tour.tour
+#tours
+	.tour
+		%h2= @tour.tour
 
-%p= @tour.place
-%p= @tour.description
-%p= @tour.price
-%p= @tour.date
-%p= @tour.duration
-%p= @tour.reservations
-%p= @tour.reviews
+		%p= @tour.place
+		%p= @tour.description
+		%p= @tour.price
+		%p= @tour.date
+		%p= @tour.duration
+		%p= @tour.reservations
+		%p= @tour.reviews
+		
+#links
 
-
-= link_to "Back", root_path, class: "btn btn-sm btn-default"
-= link_to "Edit", edit_tour_path(@tour), class: "btn btn-sm btn-default"
-= link_to "Delete", tour_path(@tour), method: :delete, data: {confirm: "Are your sure?"}, class: "btn btn-sm btn-default"
+	= link_to "Back", root_path, class: "btn btn-sm btn-default"
+	= link_to "Edit", edit_tour_path(@tour), class: "btn btn-sm btn-default"
+	= link_to "Delete", tour_path(@tour), method: :delete, data: {confirm: "Are your sure?"}, class: "btn btn-sm btn-default"
