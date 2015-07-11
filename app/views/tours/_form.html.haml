@@ -1,7 +1,8 @@
-= simple_form_for(@tour, html: { class: 'form-horizontal'}) do |f|
+= simple_form_for(@tour, html: { multipart: true, class: 'form-horizontal'}) do |f|
 	= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a category"}
 	= f.input :tour, label: "Tour Title" 
 	= f.input :place, label: "Place of Tour"
+	= f.input_field :image, label: "Upload Picture"	
 	= f.input :description, label: "Tour Description"
 	= f.input :price, label: "Price of Tour"
 	= f.input :date, label: "Date of Tour"

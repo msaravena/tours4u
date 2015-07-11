@@ -2,6 +2,7 @@
 
 - @tours.each do |tour|
 		%h2= link_to tour.tour, tour
+		%p= image_tag(tour.image, size:"300x300")
 		%p= tour.place
 		%p= tour.description
 
