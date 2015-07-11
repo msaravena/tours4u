@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tour: MyString
+  place: MyString
+  description: MyText
+  price: 1.5
+  date: 2015-07-11
+  duration: MyString
+  reservations: 1
+  reviews: MyText
+
+two:
+  tour: MyString
+  place: MyString
+  description: MyText
+  price: 1.5
+  date: 2015-07-11
+  duration: MyString
+  reservations: 1
+  reviews: MyText

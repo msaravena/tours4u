@@ -1,0 +1,14 @@
+= simple_form_for(@tour, html: { class: 'form-horizontal'}) do |f|
+	= f.input :tour, label: "Tour Title" 
+	= f.input :place, label: "Place of Tour"
+	= f.input :description, label: "Tour Description"
+	= f.input :price, label: "Price of Tour"
+	= f.input :date, label: "Date of Tour"
+	= f.input :duration, label: "Duration"
+	= f.input :reservations, label: "Make a Resevation"
+	= f.input :reviews, label: "Give us your opinion"
+	%br/
+	= f.button :submit
+
+
+	
