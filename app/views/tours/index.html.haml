@@ -1,1 +1,7 @@
 %h1 Tours Home
+
+- @tours.each do |tour|
+		%h2= link_to tour.tour, tour
+		%p= tour.place
+		%p= tour.description
+
