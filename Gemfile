@@ -15,6 +15,7 @@ gem 'simple_form', '~> 3.1.0'
 gem 'haml', '~> 4.0.6'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'carrierwave'
+gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
