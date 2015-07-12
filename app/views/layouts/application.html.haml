@@ -14,12 +14,22 @@
 				%li= link_to "All Tours", root_path
 				- Category.all.each do |category|
 					%li= link_to category.name, tours_path(category: category.name)
+			
+				-if user_signed_in? 
+					= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-text navbar-right navbar-link"
+				-else
+					= link_to "Log In", new_user_session_path, class: "navbar-text navbar-right navbar-link"
+					= link_to "Sign In", new_user_registration_path, class: "navbar-text navbar-right navbar-link"
+					
+			
 			= link_to "New Tour", new_tour_path, class: "navbar-text navbar-right navbar-link"
 		
 
 
 		.container
 			.col-md-6.col-md-offset-3
+
+
 
 				%p.notice= notice
 				%p.alert= alert

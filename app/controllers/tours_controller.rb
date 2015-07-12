@@ -1,5 +1,6 @@
 class ToursController < ApplicationController
   before_action :find_tour, only: [:show, :edit, :update, :destroy]
+  before_action :check_moderator!, except: [:index, :show]
 
   def index
 
@@ -44,15 +45,22 @@ class ToursController < ApplicationController
     redirect_to root_path
   end
 
+  private
+
   def tours_params
     params.require(:tour).permit(:tour, :place, :description, :price, :date, :duration, :reservations, :reviews, :category_id, :image)
   end
 
   def find_tour
-    @tour = Tour.find(params[:id])
+    @tour = Tour.find(params[:id])  
   end
 
-
+  def check_moderator!
+    authenticate_user!
+    unless current_user.registered_user?
+      redirect_to root_path, alert: "You do not have access"
+    end
+  end
 
 
 end

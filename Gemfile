@@ -16,6 +16,7 @@ gem 'haml', '~> 4.0.6'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'carrierwave'
 gem 'devise'
+gem 'cancancan'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

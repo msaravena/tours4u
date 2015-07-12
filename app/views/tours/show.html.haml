@@ -13,5 +13,5 @@
 #links
 
 	= link_to "Back", root_path, class: "btn btn-sm btn-default"
-	= link_to "Edit", edit_tour_path(@tour), class: "btn btn-sm btn-default"
-	= link_to "Delete", tour_path(@tour), method: :delete, data: {confirm: "Are your sure?"}, class: "btn btn-sm btn-default"
+	= link_to "Edit", edit_tour_path(@tour) if can? :edit, Tour, class: "btn btn-sm btn-default"
+	= link_to "Delete", tour_path(@tour), method: :delete, data: {confirm: "Are your sure?"} if can? :destroy, Tour, class: "btn btn-sm btn-default"
